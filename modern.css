@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h2, h3{
+    font-size: 1.9em;
+    border-bottom: 1px solid skyblue;
+    padding-bottom: .5em;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6em;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 
+    "header header"
+    "sidebar main";
+}
+
+section{
+    margin-bottom: 1em;
+}
+
+ul{
+    margin-top: 10px;
+}
+
+.contact-info > li, .lang-list > li{
+    margin-top: 10px;
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: rgb(43, 43, 51);
+}
+
+.profile-picture{
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.info{
+    padding: 2em;
+}
+
+h1{
+    padding-bottom: 1em;
+    font-size: 2.1em;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    color: white;
+    background-color: rgb(50, 50, 60);
+    padding: 20px;
+}
+
+.skills-list li{
+    background-color: steelblue;
+    padding: 0.5em;
+    border-radius: 50px;
+}
+
+.main{
+    grid-area: main;
+    padding: 50px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.job{
+    padding-top: 10px;
+}
+
+.education > p:first-of-type, .summary > p:first-of-type{
+    margin-top: 10px;
+}
+
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.grey{
+    color: rgb(115, 115, 115);
+}
+
+@media (max-width: 768px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "sidebar"
+        "main";
+    }
+}
